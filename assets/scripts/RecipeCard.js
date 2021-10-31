@@ -100,14 +100,14 @@ class RecipeCard extends HTMLElement {
 
     console.log(typeof img);
 
-    // thumbnail
-    var thumbnail = document.createElement('img');
-    thumbnail.src = img;
-    thumbnail.alt = "Recipe Title"
-
     if(headline == undefined){
       headline = searchForKey(data, "name");
     }
+
+    // thumbnail
+    var thumbnail = document.createElement('img');
+    thumbnail.src = img;
+    thumbnail.alt = headline;
 
     // p > a
     var p_a = document.createElement('p');
@@ -174,8 +174,8 @@ class RecipeCard extends HTMLElement {
     // created in the constructor()
 
     // Part 1 Expose - TODO
-    this.shadowRoot.appendChild(card);
     this.shadowRoot.appendChild(styleElem);
+    this.shadowRoot.appendChild(card);
   }
 }
 

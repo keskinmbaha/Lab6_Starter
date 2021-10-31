@@ -1,0 +1,90 @@
+{
+	"@context": "http:\/\/schema.org",
+	"@type": "Recipe",
+	"headline": "Caramel Candy",
+	"author": {
+		"@type": "Person",
+		"name": "The Gunny Sack"
+	},
+	"datePublished": "2020-01-13",
+	"recipeYield": 72,
+	"description": "This microwave Caramel Candy recipe makes soft, melt-in-your-mouth caramels that everyone loves! Made with only 5 ingredients, they are a family tradition.",
+	"thumbnailUrl": "https:\/\/www.thegunnysack.com\/wp-content\/uploads\/2019\/12\/Homemade-Caramel-Candy-720x540.jpg",
+	"recipeCategory": "Candy",
+	"recipeCuisine": "American",
+	"prepTime": "PT5M",
+	"cookTime": "PT25M",
+	"performTime": "PT25M",
+	"totalTime": "PT30M",
+	"recipeIngredient": ["1 cup butter", "14 oz sweetened condensed milk", "2 cups granulated sugar", "1 cup light corn syrup", "1 tsp vanilla extract"],
+	"recipeInstructions": [{
+		"@type": "HowToStep",
+		"text": "Be VERY cautious when making, stirring, and pouring caramel candy because it is super hot.",
+		"position": 1,
+		"name": "Be VERY cautious when making, stirring, and pouring...",
+		"url": "https:\/\/www.thegunnysack.com\/homemade-holiday-treats-vanilla-caramels\/#mv_create_11_1"
+	}, {
+		"@type": "HowToStep",
+		"text": "In a very, large microwave-safe bowl, put the butter, sweetened condensed milk, sugar, and corn syrup. Microwave on high for 5 minutes and then stir.",
+		"position": 2,
+		"name": "In a very, large microwave-safe bowl, put the...",
+		"url": "https:\/\/www.thegunnysack.com\/homemade-holiday-treats-vanilla-caramels\/#mv_create_11_2"
+	}, {
+		"@type": "HowToStep",
+		"text": "Microwave at 50% power in 5 minutes intervals for 15-25 minutes total, or until caramel reaches 238\u02daF to 244\u02daF on a candy thermometer. They have to be a deep golden caramel color and should form a soft ball in cold water.",
+		"position": 3,
+		"name": "Microwave at 50% power in 5 minutes intervals...",
+		"url": "https:\/\/www.thegunnysack.com\/homemade-holiday-treats-vanilla-caramels\/#mv_create_11_3"
+	}, {
+		"@type": "HowToStep",
+		"text": "Remove from the microwave and stir in the vanilla extract.",
+		"position": 4,
+		"name": "Remove from the microwave and stir in the...",
+		"url": "https:\/\/www.thegunnysack.com\/homemade-holiday-treats-vanilla-caramels\/#mv_create_11_4"
+	}, {
+		"@type": "HowToStep",
+		"text": "Pour caramels into a lightly buttered 9\u00d713\u2033 pan. Cool completely at room temperature.",
+		"position": 5,
+		"name": "Pour caramels into a lightly buttered 9\u00d713\u2033 pan....",
+		"url": "https:\/\/www.thegunnysack.com\/homemade-holiday-treats-vanilla-caramels\/#mv_create_11_5"
+	}, {
+		"@type": "HowToStep",
+		"text": "Cut into squares and wrap in waxed paper.",
+		"position": 6,
+		"name": "Cut into squares and wrap in waxed paper.",
+		"url": "https:\/\/www.thegunnysack.com\/homemade-holiday-treats-vanilla-caramels\/#mv_create_11_6"
+	}, {
+		"@type": "HowToStep",
+		"text": "Store in an airtight container the refrigerator or freezer.",
+		"position": 7,
+		"name": "Store in an airtight container the refrigerator or...",
+		"url": "https:\/\/www.thegunnysack.com\/homemade-holiday-treats-vanilla-caramels\/#mv_create_11_7"
+	}],
+	"video": {
+		"@type": "VideoObject",
+		"name": "Caramel Candy",
+		"description": "This microwave Caramel Candy recipe makes soft, melt-in-your-mouth caramels that everyone loves! Made with only 5 ingredients, they are a family tradition.",
+		"thumbnailUrl": ["https:\/\/mediavine-res.cloudinary.com\/image\/upload\/s--7862Gfus--\/ar_16:9,c_fill,f_auto,fl_lossy,q_auto\/v1576094730\/qjfgwvxs0fwzxrcirdse.jpg", "https:\/\/mediavine-res.cloudinary.com\/image\/upload\/s--PKxNfseH--\/ar_4:3,c_fill,f_auto,fl_lossy,q_auto\/v1576094730\/qjfgwvxs0fwzxrcirdse.jpg", "https:\/\/mediavine-res.cloudinary.com\/image\/upload\/s--6U4AnYxs--\/ar_1:1,c_fill,f_auto,fl_lossy,q_auto\/v1576094730\/qjfgwvxs0fwzxrcirdse.jpg"],
+		"contentUrl": "https:\/\/mediavine-res.cloudinary.com\/video\/upload\/s9hjy524963vrljupcfk.mp4",
+		"duration": "PT110S",
+		"uploadDate": "2021-10-30T00:00:31+00:00"
+	},
+	"keywords": "caramel candy,caramels,",
+	"nutrition": {
+		"@type": "NutritionInformation",
+		"calories": "75 calories",
+		"carbohydrateContent": "12 grams carbohydrates",
+		"cholesterolContent": "9 milligrams cholesterol",
+		"proteinContent": "1 grams protein",
+		"saturatedFatContent": "2 grams saturated fat",
+		"servingSize": "72 Servings",
+		"sodiumContent": "33 grams sodium",
+		"sugarContent": "12 grams sugar"
+	},
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": 4,
+        "ratingCount": 2
+	},
+	"url": "https:\/\/www.thegunnysack.com\/homemade-holiday-treats-vanilla-caramels\/"
+}

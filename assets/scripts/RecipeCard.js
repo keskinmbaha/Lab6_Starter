@@ -98,10 +98,16 @@ class RecipeCard extends HTMLElement {
     var time = searchForKey(data, "totalTime");
     time = convertTime(time);
 
+    console.log(typeof img);
+
     // thumbnail
     var thumbnail = document.createElement('img');
     thumbnail.src = img;
     thumbnail.alt = "Recipe Title"
+
+    if(headline == undefined){
+      headline = searchForKey(data, "name");
+    }
 
     // p > a
     var p_a = document.createElement('p');

@@ -1,8 +1,9 @@
 class RecipeCard extends HTMLElement {
   constructor() {
     // Part 1 Expose - TODO
-
+    super();
     // You'll want to attach the shadow DOM here
+    this.attachShadow({mode: 'open'});
   }
 
   set data(data) {
@@ -87,7 +88,74 @@ class RecipeCard extends HTMLElement {
 
     // Here's the root element that you'll want to attach all of your other elements to
     const card = document.createElement('article');
+    var articleUrl = getUrl(data);
+    var ingredients = searchForKey(data, "recipeIngredient");
+    ingredients = createIngredientList(ingredients);
+    var img = searchForKey(data, "thumbnailUrl");
+    var headline = searchForKey(data, "headline");
+    var org = searchForKey(data, "name");
+    var aggRating = searchForKey(data, "aggregateRating");
+    var time = searchForKey(data, "totalTime");
+    time = convertTime(time);
 
+    // thumbnail
+    var thumbnail = document.createElement('img');
+    thumbnail.src = img;
+    thumbnail.alt = "Recipe Title"
+
+    // p > a
+    var p_a = document.createElement('p');
+    var a = document.createElement('a');
+    p_a.setAttribute("class", "title");
+    a.href = articleUrl
+    a.text = headline;
+    p_a.appendChild(a);
+
+    // p organization
+    var p_org = document.createElement('p');
+    p_org.setAttribute("class", "organization");
+    p_org.innerHTML = org;
+
+    // div rating or no rating
+    var div_rat = document.createElement('div');
+    var span_rating = document.createElement('span');
+    div_rat.setAttribute("class", "rating");
+
+    if(aggRating != undefined){
+      var span_count = document.createElement('span');
+      var rating_img = document.createElement('img');
+
+      span_rating.textContent = aggRating["ratingValue"];
+      span_count.textContent = "(" + aggRating["ratingCount"] + ")";
+      rating_img.src = ratingImage(Math.round(aggRating["ratingValue"]));
+      rating_img.alt = aggRating["ratingValue"] + " stars";
+
+      div_rat.appendChild(span_rating);
+      div_rat.appendChild(rating_img);
+      div_rat.appendChild(span_count);
+    }
+
+    else{
+      span_rating.textContent = "No Reviews";
+      div_rat.appendChild(span_rating);
+    }
+
+    // time
+    var time_element = document.createElement("time");
+    time_element.textContent = time;
+
+    // ingredients
+    var p_ing = document.createElement("p");
+    p_ing.setAttribute("class", "ingredients");
+    p_ing.innerHTML = ingredients;
+
+    card.appendChild(thumbnail);
+    card.appendChild(p_a);
+    card.appendChild(p_org);
+    card.appendChild(div_rat);
+    card.appendChild(time_element);
+    card.appendChild(p_ing);
+    console.log(card);
     // Some functions that will be helpful here:
     //    document.createElement()
     //    document.querySelector()
@@ -100,9 +168,27 @@ class RecipeCard extends HTMLElement {
     // created in the constructor()
 
     // Part 1 Expose - TODO
+    this.shadowRoot.appendChild(card);
+    this.shadowRoot.appendChild(styleElem);
   }
 }
 
+function ratingImage(num){
+  switch (num) {
+    case 0:
+      return "assets/images/icons/0-star.svg";
+    case 1:
+      return "assets/images/icons/1-star.svg";
+    case 2:
+      return "assets/images/icons/2-star.svg";
+    case 3:
+      return "assets/images/icons/3-star.svg";
+    case 4:
+      return "assets/images/icons/4-star.svg";
+    case 5:
+      return "assets/images/icons/5-star.svg";
+  }
+}
 
 /*********************************************************************/
 /***                       Helper Functions:                       ***/

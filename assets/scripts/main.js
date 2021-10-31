@@ -104,22 +104,37 @@ function bindShowMore() {
   // Part 2 Explore - TODO
   var button = document.getElementsByTagName("button")[0];
   var main = document.getElementsByTagName("main")[0];
+  var recipeCards = document.getElementsByTagName("recipe-card");
 
   button.addEventListener('click', function(){
 
     if(button.textContent == "Show more"){
       button.textContent = "Show less";
-      for(let i = 3; i < 6; i++){
-        let recipe = recipeData[i];
-        let recipeCard = document.createElement("recipe-card");
-    
-        recipeCard.data = recipe;
-        main.appendChild(recipeCard);
+      
+      if(recipeCards.length > 3){
+        for(let recipeCard in recipeCards){
+          try{
+            let child = recipeCards[recipeCard];
+            child.hidden = false;
+          }
+          catch(error){
+            break;
+          }
+        }
+      }
+      
+      else{
+        for(let i = 3; i < 6; i++){
+          let recipe = recipeData[i];
+          let recipeCard = document.createElement("recipe-card");
+      
+          recipeCard.data = recipe;
+          main.appendChild(recipeCard);
+        }
       }
     }
     else{
       button.textContent = "Show more";
-      var recipeCards = document.getElementsByTagName("recipe-card");
 
       let i = 0;
       for(let recipeCard in recipeCards){
